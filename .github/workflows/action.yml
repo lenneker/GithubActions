@@ -6,8 +6,16 @@ jobs:
     run-shell-commands:
       runs-on: ubuntu-latest
       steps:
-      - name: cwd
-        run: pwd
+      - name: cwd and ls
+        run: | 
+            pwd
+            ls -l
+      - name: Checkout will download git repo
+        uses: action/checkout@v2
+      - name: cwd ans ls after checkout
+        run: | 
+            pwd
+            ls -l
       - name: echo a string
         run: echo "hello world of actions"
       - name: multiline echo
