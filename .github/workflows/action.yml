@@ -4,12 +4,12 @@ on: [push]
 
 jobs:
     run-shell-commands:
-    runs-on: ubuntu-latest
-    steps:
-    - name: echo a string
-      run: echo "hello world of actions"
-    - name: multiline echo
-      run: |
+      runs-on: ubuntu-latest
+      steps:
+      - name: echo a string
+        run: echo "hello world of actions"
+      - name: multiline echo
+        run: |
           echo "first line"
           uname -s
           docker --version
