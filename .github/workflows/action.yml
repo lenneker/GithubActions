@@ -14,3 +14,8 @@ jobs:
           uname -s
           docker --version
           java --version
+      - name: comandos python
+        run: |
+          import plataform
+          print(platform.processor())
+        shell: python
