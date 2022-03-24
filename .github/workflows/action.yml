@@ -19,3 +19,11 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+    run-windows-commands:
+        runs-on: windows-latest
+        steps:
+            - name: powershell directory
+              run: dir
+            - name: bash directory
+              run: ls -l
+              shell: bash
