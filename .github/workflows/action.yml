@@ -16,6 +16,6 @@ jobs:
           java --version
       - name: comandos python
         run: |
-          import plataform
+          import platform
           print(platform.processor())
         shell: python
