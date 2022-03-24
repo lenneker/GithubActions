@@ -11,7 +11,7 @@ jobs:
             pwd
             ls -l
       - name: Checkout will download git repo
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
       - name: cwd ans ls after checkout
         run: | 
             pwd
