@@ -13,7 +13,7 @@ jobs:
                       node_versions: 14
                     - os: ubuntu-latest
                       node_versions: 8
-                      is_ubunutu_8: "true"
+                      is_ubuntu_8: "true"
                 exclude:
                     - os: macos-latest
                       node_versions: 8
