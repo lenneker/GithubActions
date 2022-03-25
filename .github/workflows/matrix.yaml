@@ -23,7 +23,7 @@ jobs:
             
             - uses: actions/setup-node@v1
               with:
-                  node-verion: ${{ matrix.node_versions }}
+                  node-version: ${{ matrix.node_versions }}
 
             - name: iterering trought matrix strategy
               run: node -v
