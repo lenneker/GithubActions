@@ -8,8 +8,21 @@ jobs:
             matrix:
                 os: [macos-latest, ubuntu-latest, windows-latest]
                 node_versions: [6, 8, 10]
+                include:
+                    - os: ubuntu-latest
+                      node_versions: 14
+                    - os: ubuntu-latest
+                      node_versions: 8
+                      is_ubunutu_8: "true"
+                exclude:
+                    - os: macos-latest
+                      node_versions: [6, 8]
+                    - os: windows-latest
+                      node_versions: [8, 10]
             max-parallel: 2
         runs-on: ${{ matrix.os }}
+        env:
+            IS_UBUNTU_8: ${{matrix.is_ubuntu_8}}
         steps:
             - name: log node version
               run: node -v
@@ -26,4 +39,6 @@ jobs:
                   node-version: ${{ matrix.node_versions }}
 
             - name: iterering trought matrix strategy
-              run: node -v
+              run: |
+                  node -v
+                  echo $IS_UBUNTU_8
