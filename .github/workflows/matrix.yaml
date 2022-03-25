@@ -16,9 +16,9 @@ jobs:
                       is_ubunutu_8: "true"
                 exclude:
                     - os: macos-latest
-                      node_versions: [6, 8]
+                      node_versions: 8
                     - os: windows-latest
-                      node_versions: [8, 10]
+                      node_versions: 10
             max-parallel: 2
         runs-on: ${{ matrix.os }}
         env:
