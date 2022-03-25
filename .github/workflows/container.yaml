@@ -12,4 +12,21 @@ jobs:
               run: |
                   node -v
                   cat /etc/os-release
+    docker-steps:
+        runs-on: ubuntu-latest
+        container:
+            image: node:10.18.0-jessie
+        steps:
+            - name: log node version
+              run: node -v
+            - name: step within another image
+              uses: docker://node:12.14.1-alpine3.10
+              with:
+                  entrypoint: '/bin/echo'
+                  args: 'hello wordl'
+            - name: log node version 
+              uses: docker://node:12.14.1-alpine3.10
+              with:
+                  entrypoint: '/usr/local/bin/node'
+                  args: '-v'
 
