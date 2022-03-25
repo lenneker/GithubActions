@@ -1,0 +1,28 @@
+name: matrix
+
+on: push
+
+jobs:
+    node-versions:
+        strategy:
+            matrix:
+                os: [macos-latest, ubuntu-latest, windows-latest]
+                node_versions: [6, 8, 10]
+            max-parallel: 2
+        runs-on: ${{matrix.os}}
+        steps:
+            - name: log node version
+              run: node -v
+
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 6
+            - name: log new node version
+              runs: node -v
+            
+            - name: actions/setup-node@v1
+              with:
+                  node-verion: ${{matrix.node_versions}}
+
+            - name: iterering trought matrix strategy
+              run: node -v
