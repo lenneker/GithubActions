@@ -1,0 +1,14 @@
+name: Hello World
+author: lenneker nascimento
+description: first private action
+inputs:
+    who-to-greet:
+        description: 'Who to greet'
+        required: true
+        default: Leni
+outputs:
+    time: 
+        description:  
+runs:
+    using: 'node12'
+    main: 'index.js
