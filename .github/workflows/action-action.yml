@@ -8,6 +8,6 @@ jobs:
             - uses: ./.github/actions/hello
               id: hello
               with: 
-                who-to-greet: "world"
+                who-to-greet: "céu azul, malboro, seila"
             - run: |
                 echo "Time: ${{ steps.hello.outputs.time }}"
