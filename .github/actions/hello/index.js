@@ -11,7 +11,14 @@ try{
   const bebida = core.getInput('bebida');
   console.log(`voce vai comer hoje ${comidaPrincipal} e vai beber ${bebida}!`);
     
-    
+    exec('echo eu quero hoje comer ${comida}',
+    function (error, stdout, stderr) {
+        console.log('stdout: ' + stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
 
 const time = new Date();
 core.setOutput("time", time.toTimeString());
