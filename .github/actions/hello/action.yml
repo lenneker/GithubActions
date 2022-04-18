@@ -1,14 +1,32 @@
-name: Hello World
-author: lenneker nascimento
-description: first private action
+#name: Hello World
+#author: lenneker nascimento
+#description: first private action
+#inputs:
+#    who-to-greet:
+#        description: 'Who to greet'
+#        required: true
+#        default: Leni
+#outputs:
+#    time: 
+#        description:  
+#runs:
+#    using: 'node12'
+#    main: 'index.js'
+
+name: 'almoco'
+description: 'o que eu vou almocar'
 inputs:
-    who-to-greet:
-        description: 'Who to greet'
-        required: true
-        default: Leni
+  prato:  # id of input
+    description: 'prato principal'
+    required: true
+    default: 'feijoada'
+  bebida:  # id of input
+    description: 'o que vai beber'
+    required: true
+    default: 'coca-cola'
 outputs:
-    time: 
-        description:  
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-    using: 'node12'
-    main: 'index.js'
+  using: 'node16'
+  main: 'index.js'
