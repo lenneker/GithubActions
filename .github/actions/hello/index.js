@@ -12,7 +12,7 @@ try{
   const bebida = core.getInput('bebida');
   console.log(`voce vai comer hoje ${comidaPrincipal} e vai beber ${bebida}!`);
     
-    exec('echo eu quero hoje comer ${comida}',
+    exec('echo eu quero hoje comer ${comidaPrincipal}',
     function (error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
